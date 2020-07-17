@@ -1,0 +1,132 @@
+<div class="container">
+    <div class="row">
+
+        <div class="container-fluid mt--7">
+            <!-- Table -->
+            <div class="row">
+                <div class="col">
+                    <div class="card shadow">
+                        <table class="table">
+                            <thead>
+                                <tr>
+                                    <th scope="col">Tên Sản Phẩm</th>
+                                    <th scope="col">Ảnh</th>
+                                    <th scope="col">Giá</th>
+                                    <th scope="col">Số Lượng Mua</th>
+                                    <th scope="col">Số Lượng Còn</th>
+                                    <th scope="col">Thành Tiền</th>
+                                    <th scope="col"></th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr *ngFor="let item of product">
+                                    <th scope="row">{{item.item.title}}</th>
+                                    <th scope="row">
+                                        <img src="./../../../../assets/img/imgs/{{item.item.image}}" style="width: 40px;" alt="">
+                                    </th>
+                                    <th scope="row" id="price">
+                                        <input type="number" disabled="true" class="form-control-plaintext" id="soluong" value="{{item.item.price}}">
+                                    </th>
+                                    <th scope="row" id="soluongmua">
+                                        <input class="form-control text-center" id="soluong" [min]="1" [max]="item.item.quality" [(ngModel)]="item.soluong" (input)="TotalChange()" type="number">
+                                    </th>
+                                    <th scope="row" id="soluongcon">
+                                        <input type="number" disabled="true" class="form-control-plaintext" id="quality" [(ngModel)]="item.item.quality" value="{{item.item.quality}}">
+                                    </th>
+                                    <th scope="row" id="totalprice">
+                                        <input type="number" disabled="true" class="form-control-plaintext" id="total" [(ngModel)]="item.item.price * item.soluong">
+                                    </th>
+
+                                    <th scope="row">
+                                        <p>
+                                            <button (click)="delete(item) " type="button " class="btn btn-default btn-sm ">
+                              <span class="glyphicon glyphicon-trash "></span> Xóa 
+                            </button>
+                                        </p>
+                                    </th>
+                                </tr>
+                                <tr>
+                                    <th>Tổng: </th>
+                                    <th></th>
+                                    <th></th>
+                                    <th>{{Totalqty()}}
+                                    </th>
+                                    <th>{{s}}</th>
+                                    <th></th>
+                                </tr>
+
+                            </tbody>
+
+                        </table>
+
+                        <div class="card-header bg-transparent">
+                            <form novalidate (submit)="onSubmit(form)" #form="ngForm" [formGroup]="registerForm" class="row justify-content-md-center">
+                                <div class="col-md-8">
+                                    <div class="form-group row">
+                                        <label for="example-text-input" class="col-md-2 col-form-label">Tên:</label>
+                                        <div class="col-md-10">
+                                            <input class="form-control" type="text" id="name" formControlName="name" [ngClass]="{ 'is-invalid': submitted  && f.name.errors }" required>
+                                            <div *ngIf="submitted  && f.name.errors" class="invalid-feedback">
+                                                <div *ngIf="f.name.errors.required">Vui Lòng Nhập họ và tên !!</div>
+                                                <div *ngIf="f.name.errors.minlength">Vui Lòng Nhập đầy đủ họ tên !!</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="form-group row">
+                                        <label for="example-email-input" class="col-md-2 col-form-label">Email:</label>
+                                        <div class="col-md-10">
+                                            <input class="form-control" type="email" id="email" formControlName="email" [ngClass]="{ 'is-invalid': submitted && f.email.errors }">
+                                            <div *ngIf="submitted && f.email.errors" class="invalid-feedback">
+                                                <div *ngIf="f.email.errors.required">Vui lòng nhập email !!</div>
+                                                <div *ngIf="f.email.errors.email">Vui lòng nhập đúng email !!</div>
+                                            </div>
+                                        </div>
+
+                                    </div>
+                                    <div class="form-group row">
+                                        <label for="example-url-fb" class="col-md-2 col-form-label">SĐT:</label>
+                                        <div class="col-md-10">
+                                            <input class="form-control" type="number" id="phone" formControlName="phone" [ngClass]="{ 'is-invalid': submitted && f.phone.errors }">
+                                            <div *ngIf="submitted && f.phone.errors" class="invalid-feedback">
+                                                <div *ngIf="f.phone.errors.required">Vui lòng nhập SDT !!</div>
+                                                <div *ngIf="f.phone.errors.minlength">SDT không đúng !!</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="form-group row">
+                                        <label for="example-url-twt" class="col-md-2 col-form-label">Địa Chỉ:</label>
+                                        <div class="col-md-10">
+                                            <input class="form-control" type="url" id="address" formControlName="address" [ngClass]="{ 'is-invalid': submitted && f.address.errors }">
+                                            <div *ngIf="submitted && f.address.errors" class="invalid-feedback">
+                                                <div *ngIf="f.address.errors.required">Vui lòng nhập địa chỉ !!</div>
+                                                <div *ngIf="f.address.errors.minlength">Vui lòng nhập chi tiết địa chỉ !!</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!-- <div class="form-group row">
+                                        <label for="example-url-web" class="col-md-2 col-form-label">Website:</label>
+                                        <div class="col-md-10">
+                                            <input class="form-control" type="url" id="example-url-web">
+                                        </div>
+                                    </div> -->
+                                    <div class="form-group row">
+                                        <div class="col-md-10 offset-md-2">
+                                            <button class="btn btn-primary" type="submit">Đặt Hàng</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+
+    </div>
+</div>
+
+
+
+<!-- <app-checkcart *ngIf="asd" [sluong]="Totalqty()" (evt)="ssaa($event)" [s]="s"></app-checkcart> -->

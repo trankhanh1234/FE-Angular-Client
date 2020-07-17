@@ -1,0 +1,459 @@
+element.style {
+    text-align: left;
+}
+
+.dark,
+.dark p,
+.dark td {
+    color: #f1f1f1;
+}
+
+.banner h6,
+.banner h5,
+.banner p {
+    padding: 0;
+    margin-top: 1em;
+    margin-bottom: 1em;
+}
+
+.container:after,
+.row:after,
+.clearfix:after,
+.clear:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+#wrapper,
+#main {
+    background-color: #fff;
+    position: relative;
+}
+
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+main,
+menu,
+nav,
+section,
+summary {
+    display: block;
+}
+
+*,
+*:before,
+*:after {
+    box-sizing: border-box;
+}
+
+body {
+    color: #0a0a0a;
+    font-family: "Open Sans", sans-serif;
+    line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
+}
+
+:root {
+    --primary-color: #0f4c81;
+}
+
+*,
+*:before,
+*:after {
+    box-sizing: border-box;
+}
+
+*,
+*:before,
+*:after {
+    box-sizing: border-box;
+}
+
+//fill
+.fill {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    right: 0;
+    bottom: 0;
+    padding: 0 !important;
+    margin: 0 !important;
+}
+
+.banner-layers>* {
+    position: absolute !important;
+}
+
+*,
+*:before,
+*:after {
+    box-sizing: border-box;
+}
+
+div {
+    display: block;
+}
+
+body {
+    color: #0a0a0a;
+    font-family: "Open Sans", sans-serif;
+    font-size: 109%;
+    line-height: 1.6;
+}
+
+// liên hệ
+.section-title {
+    position: relative;
+    -js-display: flex;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-flow: row wrap;
+    flex-flow: row wrap;
+    -ms-flex-align: center;
+    align-items: center;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+    width: 100%;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+.heading-font {
+    color: #0a0a0a;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+.heading-font,
+.banner h1,
+.banner h2 {
+    font-weight: 700;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+.heading-font,
+.off-canvas-center .nav-sidebar.nav-vertical>li>a {
+    font-family: "Open Sans", sans-serif;
+}
+
+.h3,
+h3 {
+    font-size: 1.25em;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    color: #555;
+    width: 100%;
+    margin-top: 0;
+    margin-bottom: .5em;
+    text-rendering: optimizeSpeed;
+}
+
+h3 {
+    display: block;
+    font-size: 1.17em;
+    margin-block-start: 1em;
+    margin-block-end: 1em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    font-weight: bold;
+}
+
+.text-center {
+    text-align: center;
+}
+
+.text-shadow-3 {
+    text-shadow: 3px 3px 8px rgba(0, 0, 0, 0.4);
+}
+
+.slider-wrapper+.row:not(.row-collapse),
+.banner-grid-wrapper+.row:not(.row-collapse),
+.banner+.row:not(.row-collapse),
+.section+.row:not(.row-collapse) {
+    margin-top: 30px;
+}
+
+.row .gallery,
+.row .row:not(.row-collapse),
+.container .row:not(.row-collapse),
+.lightbox-content .row:not(.row-collapse) {
+    padding-left: 0;
+    padding-right: 0;
+    margin-left: -15px;
+    margin-right: -15px;
+    width: auto;
+}
+
+.row,
+.gallery {
+    width: 100%;
+    -js-display: flex;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-flow: row wrap;
+    flex-flow: row wrap;
+}
+
+.container-width,
+.full-width .ubermenu-nav,
+.container,
+.row {
+    max-width: 1080px;
+}
+
+body,
+.container,
+.full-width .ubermenu-nav,
+.container-width,
+.row {
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.container:after,
+.row:after,
+.clearfix:after,
+.clear:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+.section-title b {
+    display: block;
+    -ms-flex: 1;
+    flex: 1;
+    height: 2px;
+    opacity: .1;
+    background-color: currentColor;
+}
+
+b,
+strong {
+    font-weight: bolder;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+.heading-font {
+    color: #0a0a0a;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+.heading-font,
+.off-canvas-center .nav-sidebar.nav-vertical>li>a {
+    font-family: "Open Sans", sans-serif;
+}
+
+.h3,
+h3 {
+    font-size: 1.25em;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    color: #555;
+    width: 100%;
+    margin-top: 0;
+    margin-bottom: .5em;
+    text-rendering: optimizeSpeed;
+}
+
+.text-shadow-3 {
+    text-shadow: 3px 3px 8px rgba(0, 0, 0, 0.4);
+}
+
+.section-title-bold-center span,
+.section-title-bold span {
+    border: 2px solid rgba(0, 0, 0, 0.1);
+    padding: .3em .8em;
+}
+
+.section-title-center span,
+.section-title-bold-center span {
+    text-align: center;
+}
+
+.section-title span {
+    text-transform: uppercase;
+}
+
+h1>span,
+h2>span,
+h3>span,
+h4>span,
+h5>span,
+h6>span,
+p.headline>span {
+    -webkit-box-decoration-break: clone;
+    box-decoration-break: clone;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+.heading-font {
+    color: #0a0a0a;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+.heading-font,
+.banner h1,
+.banner h2 {
+    font-weight: 700;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+.heading-font,
+.off-canvas-center .nav-sidebar.nav-vertical>li>a {
+    font-family: "Open Sans", sans-serif;
+}
+
+.h3,
+h3 {
+    font-size: 1.25em;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    text-rendering: optimizeSpeed;
+}
+
+.text-shadow-3 {
+    text-shadow: 3px 3px 8px rgba(0, 0, 0, 0.4);
+}
+
+.section-title {
+    position: relative;
+    -js-display: flex;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-flow: row wrap;
+    flex-flow: row wrap;
+    -ms-flex-align: center;
+    align-items: center;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.slider-wrapper+.row:not(.row-collapse),
+.banner-grid-wrapper+.row:not(.row-collapse),
+.banner+.row:not(.row-collapse),
+.section+.row:not(.row-collapse) {
+    margin-top: 30px;
+}
+
+.row .gallery,
+.row .row:not(.row-collapse),
+.container .row:not(.row-collapse),
+.lightbox-content .row:not(.row-collapse) {
+    padding-left: 0;
+    padding-right: 0;
+    margin-left: -15px;
+    margin-right: -15px;
+    width: auto;
+}
+
+.row,
+.gallery {
+    width: 100%;
+    -js-display: flex;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-flow: row wrap;
+    flex-flow: row wrap;
+}
+
+.container-width,
+.full-width .ubermenu-nav,
+.container,
+.row {
+    max-width: 1080px;
+}
+
+label,
+legend {
+    font-weight: bold;
+    display: block;
+    font-size: .9em;
+    margin-bottom: 0.4em;
+    color: #222;
+}
+
+.wpcf7-form-control-wrap {
+    position: relative;
+}
+
+.wpcf7 .wpcf7-form-control-wrap {
+    display: block;
+}
+
+label {
+    cursor: default;
+}
+
+.text-shadow-3 {
+    text-shadow: 3px 3px 8px rgba(0, 0, 0, 0.4);
+}
+
+.wpcf7 .wpcf7-form-control-wrap {
+    display: block;
+}

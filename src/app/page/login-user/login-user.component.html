@@ -1,0 +1,23 @@
+<section class="blog_area section-padding">
+    <div class="container">
+        <form [formGroup]="registerForm" #form="ngForm" (submit)="Login(form)">
+            <div class="form-row">
+                <div class="col-md-6 mb-3 ">
+                    <label for="validationServer01">Tài Khoản:</label>
+                    <input type="email" class="form-control is-valid" id="username" name="username" formControlName="username" [ngClass]="{'is-invalid':  f.username.touched  && f.username.errors}" placeholder="email@example.com" required>
+                    <div class="invalid-feedback" *ngIf="f.username.touched && (f.username.hasError('required')||f.username.hasError('minLength'))">
+                        <i class="fas fa-info-circle"></i>Email yêu cầu nhập đúng định dạng email. Bắt buộc nhập.
+                    </div>
+                </div>
+                <div class="col-md-6 mb-3 ">
+                    <label for="validationServer01">Mật Khẩu:</label>
+                    <input type="text" class="form-control is-valid" id="password" name="password" formControlName="password" [ngClass]="{'is-invalid':  f.password.touched && f.password.errors}" placeholder="Nhập mật khẩu" required>
+                    <div class="invalid-feedback" *ngIf="f.password.touched && (f.password.hasError('required')||f.password.hasError('minLength'))">
+                        <i class=" fas fa-info-circle "></i>Yêu cầu Password phải có ít nhất 9 ký tự!
+                    </div>
+                </div>
+            </div>
+            <button class="btn btn-primary " type="submit ">Đăng Nhập</button>
+        </form>
+    </div>
+</section>

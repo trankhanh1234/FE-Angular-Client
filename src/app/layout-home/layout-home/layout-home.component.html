@@ -1,0 +1,31 @@
+<app-header></app-header>
+<div class="slider_area">
+    <div class="single_slider  d-flex align-items-center slider_bg_1">
+        <div class="container">
+            <div class="row align-items-center justify-content-center">
+                <div class="col-lg-7 col-md-6">
+                    <div class="slider_text">
+                        <h3 class="wow fadeInRight" data-wow-duration="1s" data-wow-delay=".1s">Chào mừng bạn đến với shop bán tranh của chúng tôi!</h3>
+                        <!-- <div class="sldier_btn wow fadeInLeft" data-wow-duration="1s" data-wow-delay=".2s">
+                            <a href="#" class="boxed-btn3">How it Works</a>
+                        </div> -->
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</div>
+<nav id="menu">
+    <div class="container">
+        <ul class="menu">
+            <li *ngFor="let item of categori"><a style="cursor:pointer" routerLink="/CategoriByID/{{item._id}}">{{item.title}}</a></li>
+        </ul>
+    </div>
+</nav>
+<!-- service_area_start  -->
+<router-outlet></router-outlet>
+<!-- service_area_end  -->
+
+
+<app-footer></app-footer>
